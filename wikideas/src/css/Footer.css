@@ -1,0 +1,22 @@
+@import './Variables.css';
+
+  
+  .footer {
+    background-color: var(--primario);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footer_content {
+    color: var(--secundario);
+    font-size: 14px;
+  }
+  
+  .footer_content p {
+    margin: 5px 0;
+  }
+  
+  .footer_content span {
+    font-weight: bold;
+  }
+  

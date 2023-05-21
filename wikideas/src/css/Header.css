@@ -1,0 +1,104 @@
+@import './Variables.css';
+
+.banner_main{
+    background-image: url('../Assets/header.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    min-height: 100vh;
+    height: 53vh;
+    position: relative;
+}
+
+.banner_main::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, rgba(0,0,0,0) 0%, #00000e98 100%);
+}
+
+.banner_main header{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    background-color: var(--primario);
+}
+
+.banner_main nav ul{
+    display: flex;
+    gap: 20px;
+}
+.banner_main nav ul a{
+    color: var(--secundario);
+    font-size: 19px;
+}
+
+.banner_logo{
+    margin: 20px 0;
+    color: var(--secundario);
+    font-size: 50px;
+    font-weight: 100;
+}
+
+.banner_logo span{
+    font-weight: bold;
+}
+
+.banner_title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    margin: 0  auto;
+    position: relative;
+    color: var(--secundario);
+    padding: 0 20px;
+}
+
+.banner_title h1{
+    font-weight: 100;
+    max-width: 700px;
+    margin: 0  auto;
+    font-size: 6rem;
+    font-weight: bold;
+}
+
+.banner_title p{
+    font-size: 3rem;
+    color: var(--secundario);
+    text-shadow: 2px 2px 2px #000000;
+    }
+
+.search_form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+}
+
+.search_form input {
+        width: 300px;
+        padding: 10px;
+        font-size: 16px;
+        border: none;
+        border-radius: 4px;
+    }
+
+.search_form button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: var(--secundario);
+        color: var(--primario);
+        border: none;
+        border-radius: 4px;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+    
