@@ -1,90 +1,90 @@
-import Footer from './Footer';
-import '../css/Home.css';
-import card1Image from '../Assets/Card1.jpg';
-import card2Image from '../Assets/Card2.jpg';
-import card3Image from '../Assets/Card3.jpg';
+import Header from "./Header";
+import Footer from "./Footer";
+import card1Image from "../Assets/Card1.jpg";
+import card2Image from "../Assets/Card2.jpg";
+import card3Image from "../Assets/Card3.jpg";
+import bombilla from "../Assets/bombilla.jpg";
+import "../css/Home.css";
+import About from "./About";
 
 const Home = () => {
-return (
-    <div className="banner_main">
-        <header>
-        <a href="/">
-            <h2 className="banner_logo">Wiki<span>deas</span></h2>
-        </a>
-        <nav>
-            <ul>
-            <li><a href="/">Inicio</a></li>
-            <li><a href="/Create">Crear</a></li>
-            <li><a href="/Team">Nosotros</a></li>
-            </ul>
-        </nav>
-        </header>
-        <div className="banner_title">
-        <h1>¿Quieres consultar, colaborar o crear?</h1>
-        </div>
-
-        <div className="search_bar">
-        <input type="text" placeholder="Buscar..." />
-        <button>Buscar</button>
-        </div>
-
-        <section className="container__cursos">
+  return (
+    <>
+      <Header />
+      <section className="container__cursos">
         <article className="card">
-            <figure>
+          <figure>
             <img src={card1Image} alt="Imagen 1" />
             <figcaption>Texto de la imagen</figcaption>
-            </figure>
-            <div className="contenido">
+          </figure>
+          <div className="contenido">
             <h3>Tecnologia</h3>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
-                commodi aliquam odit unde voluptatem quo ipsam voluptates
-                voluptatibus quaerat numquam.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Inventore, commodi aliquam odit unde voluptatem quo ipsam
+              voluptates voluptatibus quaerat numquam.
             </p>
             <a href="#">Gratis</a>
-            </div>
+          </div>
         </article>
 
         <article className="card">
-                <figure>
+          <figure>
             <img src={card2Image} alt="Imagen 2" />
             <figcaption>Texto de la imagen</figcaption>
-            </figure>
-            <div className="contenido">
+          </figure>
+          <div className="contenido">
             <h3>Historia</h3>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
-                commodi aliquam odit unde voluptatem quo ipsam voluptates
-                voluptatibus quaerat numquam.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Inventore, commodi aliquam odit unde voluptatem quo ipsam
+              voluptates voluptatibus quaerat numquam.
             </p>
             <a href="#">Gratis</a>
-            </div>
+          </div>
         </article>
 
         <article className="card">
-            <figure>
+          <figure>
             <img src={card3Image} alt="Imagen 3" />
             <figcaption>Texto de la imagen</figcaption>
-            </figure>
-            <div className="contenido">
+          </figure>
+          <div className="contenido">
             <h3>zen</h3>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
-                commodi aliquam odit unde voluptatem quo ipsam voluptates
-                voluptatibus quaerat numquam.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Inventore, commodi aliquam odit unde voluptatem quo ipsam
+              voluptates voluptatibus quaerat numquam.
             </p>
             <a href="#">Gratis</a>
-            </div>
+          </div>
         </article>
-        </section>
+      </section>
 
-        <section>
-        <h3>Misión y visión</h3>
-        <p>reglas de comunidad</p>
-        </section>
-        <Footer />
-    </div>
-    );
-}
+      <section className="MyV">
+        <article className="Mision">
+          <h2>WIKIDEAS</h2>
+          <p>
+            Encuentra información precisa y actualizada en nuestra enciclopedia
+            creada por la comunidad, donde se fomenta la colaboración y el
+            intercambio de conocimientos
+          </p>
+        </article>
+        <article className="Vision">
+          <p>
+            Es una enciclopedia, entendida como soporte que permite la
+            recopilación, el almacenamiento y la transmisión de la información
+            de forma estructurada. Es un wiki, por lo que, con pequeñas
+            excepciones, puede ser editada por cualquiera. Es de contenido
+            abierto.
+          </p>
+          <img src={bombilla} alt="imagen de bombilla" />
+        </article>
+      </section>
+      <About />
+      <Footer />
+    </>
+  );
+};
 
 export default Home;
