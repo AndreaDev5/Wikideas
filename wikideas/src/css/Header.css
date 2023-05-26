@@ -5,7 +5,7 @@ header{
     opacity: 0.9;
     width: 100%;
     padding-top: 50px;
-    background-image: url('../Assets/Header.jpg');
+    background-image: url('../Assets/header.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-color: var(--primario);
@@ -34,7 +34,8 @@ nav ul a{
 
 .ask {
     display: flex;
-    justify-content: space-around;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
 }
 
 .ask h1{
@@ -50,6 +51,9 @@ nav ul a{
 }
 
 .ask form {
+        position: absolute;
+        left: 30rem;
+        top: 12rem;
         display: flex;
         flex-direction: column;
         justify-content: center;

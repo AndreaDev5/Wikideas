@@ -7,17 +7,30 @@
     text-align: center;
   }
   
-  .footer_content {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
     color: var(--secundario);
     font-size: 14px;
   }
   
-  .footer_content p {
+  .footer p {
     margin: 5px 0;
   }
   
-  .footer_content span {
-    font-weight: bold;
+  .footer a {
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--secundario);
+    padding: 4px;
+  }
+  .footer a:hover{
+    transition: 700ms;
+    border-radius: 2rem;
+    background-color: var(--primario);
+    color: #1d1f20;
   }
   
   .footer-text {
