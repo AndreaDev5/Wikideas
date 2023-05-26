@@ -1,8 +1,8 @@
 @import './Variables.css';
-
+@import "@fortawesome/fontawesome-free/css/all.min.css";
   
   .footer {
-    background-color: var(--primario);
+    background-color: #1d1f20 ;
     padding: 20px;
     text-align: center;
   }
@@ -19,4 +19,24 @@
   .footer_content span {
     font-weight: bold;
   }
+  
+  .footer-text {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: 5em;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+  }
+  .footer-icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-top: 5px;
+  }
+  
+  .footer-icons i {
+    font-size: 20px;
+    margin-left: 10px;
+  }
+  
   

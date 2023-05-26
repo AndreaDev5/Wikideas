@@ -32,8 +32,8 @@
 }
 
 .teammates article div {
-  background-color: white;
-  border-radius: 10% 10% 50% 50% / 9% 10% 8% 7% ;
+  background-color: rgb(208, 235, 235);
+  border-radius: 5% 5% 5% / 4% 7% 3% ;
   padding: 10px;
 }
 

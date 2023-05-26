@@ -11,52 +11,46 @@ const Home = () => {
   return (
     <>
       <Header />
+
+      <p className="cat">Temas mas buscados</p>
       <section className="container__cursos">
         <article className="card">
           <figure>
             <img src={card1Image} alt="Imagen 1" />
-            <figcaption>Texto de la imagen</figcaption>
           </figure>
           <div className="contenido">
             <h3>Tecnologia</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Inventore, commodi aliquam odit unde voluptatem quo ipsam
-              voluptates voluptatibus quaerat numquam.
+            descubre los avances que están transformando nuestro mundo. Desde la inteligencia artificial hasta la electrónica, mantente actualizado sobre los últimos descubrimientos y desarrollos tecnológicos.
+            Aprende cómo la tecnología está dando forma a nuestra sociedad y cómo puedes ser parte de este emocionante futuro.
             </p>
-            <a href="#">Gratis</a>
+            <a href="#">Ver más</a>
           </div>
         </article>
 
         <article className="card">
           <figure>
             <img src={card2Image} alt="Imagen 2" />
-            <figcaption>Texto de la imagen</figcaption>
           </figure>
           <div className="contenido">
             <h3>Historia</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Inventore, commodi aliquam odit unde voluptatem quo ipsam
-              voluptates voluptatibus quaerat numquam.
+            sumérgete en el fascinante pasado que ha moldeado nuestro presente. Explora civilizaciones antiguas, eventos históricos clave y las vidas de personajes influyentes. Comprende cómo las decisiones y los acontecimientos pasados continúan impactando nuestra sociedad hoy en día. Aprende de la historia para construir un futuro mejor.
             </p>
-            <a href="#">Gratis</a>
+            <a href="#">Ver más</a>
           </div>
         </article>
 
         <article className="card">
           <figure>
             <img src={card3Image} alt="Imagen 3" />
-            <figcaption>Texto de la imagen</figcaption>
           </figure>
           <div className="contenido">
             <h3>zen</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Inventore, commodi aliquam odit unde voluptatem quo ipsam
-              voluptates voluptatibus quaerat numquam.
+            encuentra equilibrio y serenidad en tu vida cotidiana. Descubre las enseñanzas ancestrales de esta tradición espiritual y filosófica, que enfatiza la conexión mente-cuerpo y la atención plena. Explora prácticas meditativas y aprende a vivir en el presente, encontrando paz interior y sabiduría en un mundo acelerado.
             </p>
-            <a href="#">Gratis</a>
+            <a href="#">Ver más</a>
           </div>
         </article>
       </section>

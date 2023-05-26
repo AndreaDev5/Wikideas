@@ -4,8 +4,12 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer_content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <p>© 2023 Wiki<span>deas</span>. Todos los derechos reservados.</p>
+        <p className="footer-text">Creado por y para la comunidad</p>
+        <div className="footer-icons">
+          <i className="fab fa-facebook"></i>
+          <i className="fab fa-twitter"></i>
+          <i className="fab fa-instagram"></i>
+        </div>
       </div>
     </footer>
   );

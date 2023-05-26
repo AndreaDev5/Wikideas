@@ -1,45 +1,37 @@
-import React from "react";
-import dev from "../Assets/yo.jpeg";
+import dev from "../Assets/Misión.jpg";
 import "../css/About.css";
+
 
 const About = () => {
   return (
     <section className="about">
       <h2>Conoce mas</h2>
-      <p>Aca hay mas información</p>
       <section className="teammates">
         <article>
           <div>
-            <h3>Mision1</h3>
+            <h3>Mision</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Dignissimos impedit consequuntur iusto eaque illum. Fugit, vero
-              labore, eius quis aspernatur saepe sint placeat voluptatem at
-              voluptas debitis in molestias consequatur.
+            Nuestra misión es crear una enciclopedia colaborativa de acceso libre, donde cualquier persona pueda contribuir y compartir conocimientos de manera abierta y sin restricciones. Nos esforzamos por promover la difusión del conocimiento, fomentando la participación activa de la comunidad para garantizar una información precisa, confiable y actualizada.
             </p>
           </div>
           <img src={dev} alt="ola" />
         </article>
         <article>
           <div>
-            <h3>Mision2</h3>
+            <h3>Visión</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Dignissimos impedit consequuntur iusto eaque illum. Fugit, vero
-              labore, eius quis aspernatur saepe sint placeat voluptatem at
-              voluptas debitis in molestias consequatur.
+            Aspiramos a convertirnos en una referencia global en el ámbito del conocimiento, ofreciendo una plataforma inclusiva y accesible para que expertos, entusiastas y estudiantes puedan contribuir y beneficiarse de una base de conocimientos en constante crecimiento. Nuestro objetivo es empoderar a las personas al brindarles la oportunidad de compartir sus ideas, investigaciones y descubrimientos de manera colaborativa.
             </p>
           </div>
           <img src={dev} alt="ola" />
         </article>
         <article>
           <div>
-            <h3>Mision3</h3>
+            <h3>reglas de comunidad</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Dignissimos impedit consequuntur iusto eaque illum. Fugit, vero
-              labore, eius quis aspernatur saepe sint placeat voluptatem at
-              voluptas debitis in molestias consequatur.
+            Libertad de expresión: Fomentamos un ambiente inclusivo y respetuoso que valore la diversidad de opiniones y perspectivas. Sin embargo, no se tolerará ningún contenido ofensivo, difamatorio, discriminatorio, ilegal o perjudicial.
+
+Precisión y fiabilidad: Priorizamos la exactitud y la calidad de la información. Al contribuir, asegúrate de respaldar tus afirmaciones con fuentes verificables y evita la difusión de información falsa o engañosa.
             </p>
           </div>
           <img src={dev} alt="ola" />
