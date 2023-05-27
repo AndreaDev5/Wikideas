@@ -1,6 +1,12 @@
 import "../css/Header.css";
 
-const Header = () => {
+const Header = ({ busq, setBusq }) => {
+  const handleChange = (e) => {
+    e.preventDefault();
+    setBusq(!busq);
+    console.log(busq);
+  };
+
   return (
     <>
       <header>
@@ -27,7 +33,7 @@ const Header = () => {
 
           <form>
             <input type="text" placeholder="Buscar..." />
-            <button>Buscar</button>
+            <button onClick={handleChange}>Buscar</button>
           </form>
         </section>
       </header>
