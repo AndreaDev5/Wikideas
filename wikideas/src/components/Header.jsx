@@ -1,5 +1,6 @@
 import "../css/Header.css";
 
+
 const Header = ({ busq, setBusq }) => {
   const handleChange = (e) => {
     e.preventDefault();
@@ -11,7 +12,7 @@ const Header = ({ busq, setBusq }) => {
     <>
       <header>
         <nav>
-          <a href="/">
+          <a className="title" href="/">
             <h2 className="banner_logo">Wikideas</h2>
           </a>
           <ul>

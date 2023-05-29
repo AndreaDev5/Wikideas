@@ -1,0 +1,58 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.form-container {
+    max-width: 300px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--primario);
+}
+
+.form-container form {
+    display: grid;
+    grid-gap: 10px;
+}
+
+.form-container label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em; /* Ajusta la separación entre etiqueta e input */
+}
+
+.form-container input,
+.form-container textarea {
+    padding: 10px;
+    border: 1px solid var(--primario);
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box; /* Evita que los elementos se expandan */
+}
+
+.form-container textarea {
+    resize: none; /* Evita que el textarea sea redimensionable */
+}
+
+.form-container button {
+    grid-column: 1 / span 2;
+    padding: 10px 20px;
+    background-color: var(--primario);
+    color: var(--secundario);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: var(--primario);
+}

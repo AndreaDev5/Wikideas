@@ -30,8 +30,7 @@ const About = () => {
             <h3>reglas de comunidad</h3>
             <p>
             Libertad de expresión: Fomentamos un ambiente inclusivo y respetuoso que valore la diversidad de opiniones y perspectivas. Sin embargo, no se tolerará ningún contenido ofensivo, difamatorio, discriminatorio, ilegal o perjudicial.
-
-Precisión y fiabilidad: Priorizamos la exactitud y la calidad de la información. Al contribuir, asegúrate de respaldar tus afirmaciones con fuentes verificables y evita la difusión de información falsa o engañosa.
+            Precisión y fiabilidad: Priorizamos la exactitud y la calidad de la información. Al contribuir, asegúrate de respaldar tus afirmaciones con fuentes verificables y evita la difusión de información falsa o engañosa.
             </p>
           </div>
           <img src={dev} alt="ola" />

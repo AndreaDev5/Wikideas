@@ -69,8 +69,8 @@
     height: 400px;
     background-color: #D4FAFC;
     display: flex;
- }
- .MyV .Mision {
+}
+.MyV .Mision {
     background-color: #2EC5CE;
     font-size: 20px;
     display: flex;
@@ -81,19 +81,19 @@
     padding-left: 10%;
     padding-right: 10%;
     width: 30%;
- }
- .Mision h2{
+}
+.Mision h2{
     font-weight: bold;
- }
+}
 
- .MyV .Vision {
+.MyV .Vision {
     margin: auto 0;
     background-color:  #fff;
     padding: 2% 2% 0 2%;
     width: 30%;
     height: 80%;
     text-align: left;
- }
- .MyV .Vision img {
+}
+.MyV .Vision img {
     height: 150px;
- }
+}
