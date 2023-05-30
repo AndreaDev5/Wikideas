@@ -56,7 +56,7 @@
     margin: 1.5rem auto;
     color:  #0f0b0b;
     border-radius: .5rem;
-    border: 1px solid var(--primario);
+    border: 1px solid rgb(9, 9, 9);
     font-size: 1.8rem;
 }
 
