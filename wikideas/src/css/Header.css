@@ -4,7 +4,7 @@ header{
     display: block;
     opacity: 0.9;
     width: 100%;
-    padding-top: 50px;
+    padding-top: 20px;
     background-image: url('../Assets/Header1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -13,13 +13,14 @@ header{
 
 header nav{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 nav ul{
     display: flex;
     align-items: center;
     list-style: none;
     gap: 40px;
+    padding-left: 40rem;
 }
 nav ul a{
     color: var(--secundario);
@@ -54,7 +55,7 @@ nav ul a{
 .ask form {
         position: absolute;
         left: 30rem;
-        top: 12rem;
+        top: 14rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
