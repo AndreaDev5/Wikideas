@@ -1,55 +1,46 @@
 @import './Variables.css';
 @import "@fortawesome/fontawesome-free/css/all.min.css";
   
-  .footer {
-    background-color: #1d1f20 ;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .footer {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    align-items: center;
-    color: var(--secundario);
-    font-size: 14px;
-  }
-  
-  .footer p {
-    margin: 5px 0;
-  }
-  
-  .footer a {
-    font-size: 18px;
-    text-decoration: none;
-    color: var(--secundario);
-    padding: 4px;
-  }
-  .footer a:hover{
-    transition: 700ms;
-    border-radius: 2rem;
-    background-color: var(--primario);
-    color: #1d1f20;
-  }
-  
-  .footer-text {
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    font-weight: 5em;
-    font-size: 1.5em;
-    display: flex;
-    justify-content: center;
-  }
-  .footer-icons {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    margin-top: 5px;
-  }
-  
-  .footer-icons i {
-    font-size: 20px;
-    margin-left: 10px;
-  }
-  
-  
+.footer {
+  background-color: #1d1f20;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--secundario);
+  font-size: 14px;
+}
+
+.footer-text {
+  text-align: center;
+  flex-grow: 1;
+}
+
+.footer a {
+  font-size: 18px;
+  text-decoration: none;
+  color: var(--secundario);
+}
+
+.footer a:hover {
+  transition: 700ms;
+  border-radius: 2rem;
+  background-color: var(--primario);
+  color: #1d1f20;
+}
+
+.footer-text {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.5em;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.footer-icons i {
+  font-size: 20px;
+  margin-left: 10px;
+}

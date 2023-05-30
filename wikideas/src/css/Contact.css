@@ -1,16 +1,15 @@
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 90vh;
+.contact-container {
+    padding: 50px;
 }
 
 .form-container {
-    max-width: 300px;
-    width: 100%;
+    max-width: 50em;
+    margin: 0 auto;
+    background-color: rgba(24, 26, 26, 0.8);
     padding: 20px;
     border-radius: 10px;
-    margin: 0 auto;
+    max-height: 500px; /* Establecemos una altura máxima */
+    overflow-y: auto; /* Agregamos desplazamiento vertical */
 }
 
 .form-container h2 {
@@ -20,39 +19,74 @@
 }
 
 .form-container form {
-    display: grid;
-    grid-gap: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
 }
 
 .form-container label {
+    color: var(--secundario);
+    padding: 2px;
     display: flex;
     align-items: center;
-    margin-bottom: 1em; /* Ajusta la separación entre etiqueta e input */
+    margin-bottom: 10px;
+}
+
+.form-container label span {
+    margin-right: 10px;
+    width: 100px;
 }
 
 .form-container input,
 .form-container textarea {
     padding: 10px;
-    border: 1px solid var(--primario);
-    border-radius: 8px;
-    width: 100%;
-    box-sizing: border-box; /* Evita que los elementos se expandan */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    flex: 1; /* El campo de texto de mensaje ocupa el espacio disponible */
 }
 
 .form-container textarea {
-    resize: none; /* Evita que el textarea sea redimensionable */
+    resize: none; /* Para evitar que el textarea se pueda expandir */
+    min-height: 100px; /* Altura mínima del textarea */
+    max-height: 200px; /* Establecemos una altura máxima para el textarea */
+    overflow-y: auto; /* Agregamos desplazamiento vertical en caso de contenido excesivo */
 }
 
 .form-container button {
-    grid-column: 1 / span 2;
+    margin-top: 20px;
+    display: block;
+    width: fit-content;
     padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
     background-color: var(--primario);
     color: var(--secundario);
-    border: none;
-    border-radius: 6px;
+    font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .form-container button:hover {
-    background-color: var(--primario);
+    background-color: #050f13;
+}
+
+  /* Estilos para hacer el formulario responsive */
+
+@media screen and (max-width: 480px) {
+.form-container {
+    padding: 10px;
+    max-height: none;
+    overflow-y: visible;
+}
+
+.form-container label span {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-container button {
+    margin-top: 10px;
+    width: 100%;
+    }
 }
