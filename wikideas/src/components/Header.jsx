@@ -1,5 +1,6 @@
 import "../css/Header.css"; 
 
+// eslint-disable-next-line react/prop-types
 const Header = ({ busq, setBusq }) => {
   // Componente funcional Header que recibe dos props: busq y setBusq
 
