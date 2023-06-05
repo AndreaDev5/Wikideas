@@ -8,8 +8,8 @@ const AppRoutes = () => {
   let routes = useRoutes([
     { path: "/", element: <Home /> },
     { path: "/create", element: <Create /> },
-    { path: "team", element: <Team /> },
-    { path: "contact", element: <Contact /> },
+    { path: "/team", element: <Team /> },
+    { path: "/contact", element: <Contact /> },
   ]);
   return routes;
 };
