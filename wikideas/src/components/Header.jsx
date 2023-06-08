@@ -1,18 +1,21 @@
-import "../css/Header.css"; 
+import "../css/Header.css";
+import { useState } from "react";
 
 const Header = ({ busq, setBusq }) => {
-  // Componente funcional Header que recibe dos props: busq y setBusq
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleChange = (e) => {
-    // Función que maneja el cambio en el formulario de búsqueda
     e.preventDefault();
-    setBusq(!busq); // Actualiza el estado de busq mediante la función setBusq
-    console.log(busq); // Muestra en la consola el valor actual de busq
+    setBusq(!busq);
+    console.log(busq);
   };
 
   const handleLogoClick = () => {
-    // Función que maneja el clic en el logotipo "Wikideas"
-    window.location.href = "/"; // Redirecciona al home al cambiar la URL de la página
+    window.location.href = "/";
+  };
+
+  const handleMenuToggle = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
@@ -20,10 +23,14 @@ const Header = ({ busq, setBusq }) => {
       <header>
         <nav>
           <h2 className="banner_logo" onClick={handleLogoClick}>
-            {/*  evento onClick */}
             Wikideas
           </h2>
-          <ul>
+          <div className={`menu-toggle ${isMenuOpen ? "active" : ""}`} onClick={handleMenuToggle}>
+            <span className="bar"></span>
+            <span className="bar"></span>
+            <span className="bar"></span>
+          </div>
+          <ul className={`menu ${isMenuOpen ? "active" : ""}`}>
             <li>
               <a href="/">Inicio</a>
             </li>
@@ -41,10 +48,8 @@ const Header = ({ busq, setBusq }) => {
           </h1>
 
           <form>
-            {/* Formulario de búsqueda */}
             <input type="text" placeholder="Buscar..." />
             <button onClick={handleChange}>Buscar</button>
-            {/* Botón de búsqueda con evento onClick que llama a la función handleChange */}
           </form>
         </section>
       </header>

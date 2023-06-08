@@ -3,6 +3,7 @@ import Home from "../components/Home";
 import Create from "../components/Create";
 import Team from "../components/Team";
 import Contact from "../components/Contact";
+import axios from 'axios';
 
 const AppRoutes = () => {
   let routes = useRoutes([
@@ -15,6 +16,14 @@ const AppRoutes = () => {
 };
 
 const App = () => {
+  axios.get('http://localhost:3900/api/data')
+  .then(response => {
+    console.log(response.data);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+
   return (
     <BrowserRouter>
       <AppRoutes />
