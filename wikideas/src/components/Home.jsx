@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Header from "./Header";
-import Information from "./Information";
+import Results from "./Results";
 import Footer from "./Footer";
 import About from "./About";
 import card1Image from "../Assets/Card1.jpg";
@@ -14,7 +14,7 @@ const Home = () => {
   return (
     <>
       <Header busq={busq} setBusq={setBusq} />
-      <Information busq={busq} />
+      <Results busq={busq} />
       <p className="cat">Temas mas buscados</p>
       <section className="container__cursos">
         <article className="card">

@@ -1,20 +1,39 @@
 import "../css/Header.css";
+import { useState } from "react";
 
 const Header = ({ busq, setBusq }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const handleChange = (e) => {
     e.preventDefault();
     setBusq(!busq);
     console.log(busq);
   };
 
+  const handleLogoClick = () => {
+    window.location.href = "/";
+  };
+
+  const handleMenuToggle = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <>
       <header>
         <nav>
-          <a className="title" href="/">
-            <h2 className="banner_logo">Wikideas</h2>
-          </a>
-          <ul>
+          <h2 className="banner_logo" onClick={handleLogoClick}>
+            Wikideas
+          </h2>
+          <div
+            className={`menu-toggle ${isMenuOpen ? "active" : ""}`}
+            onClick={handleMenuToggle}
+          >
+            <span className="bar"></span>
+            <span className="bar"></span>
+            <span className="bar"></span>
+          </div>
+          <ul className={`menu ${isMenuOpen ? "active" : ""}`}>
             <li>
               <a href="/">Inicio</a>
             </li>
