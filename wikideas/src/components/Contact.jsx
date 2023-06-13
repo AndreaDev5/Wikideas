@@ -1,21 +1,21 @@
-import  { useState } from 'react';
-import Header from './Header';
-import Footer from './Footer';
-import '../css/Contact.css';
+import { useState } from "react";
+import Header from "./Header";
+import Footer from "./Footer";
+import "../css/Contact.css";
 
 export default function Contact() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Nombre:', name);
-    console.log('Email:', email);
-    console.log('Mensaje:', message);
-    setName('');
-    setEmail('');
-    setMessage('');
+    console.log("Nombre:", name);
+    console.log("Email:", email);
+    console.log("Mensaje:", message);
+    setName("");
+    setEmail("");
+    setMessage("");
   };
 
   return (
@@ -26,17 +26,28 @@ export default function Contact() {
         <form onSubmit={handleSubmit}>
           <label>
             Nombre:
-            <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+            <input
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
           </label>
           <br />
           <label>
             Email
-            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
           </label>
           <br />
           <label>
             Mensaje
-            <textarea value={message} onChange={(e) => setMessage(e.target.value)} />
+            <textarea
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+            />
           </label>
           <br />
           <button type="submit">Enviar</button>

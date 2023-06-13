@@ -1,6 +1,5 @@
 import "../css/Header.css";
 
-
 const Header = ({ busq, setBusq }) => {
   const handleChange = (e) => {
     e.preventDefault();
