@@ -1,23 +1,21 @@
-import { useState } from 'react';
-import Header from './Header';
-import Footer from './Footer';
-import '../css/Contact.css';
+import { useState } from "react";
+import Header from "./Header";
+import Footer from "./Footer";
+import "../css/Contact.css";
 
 export default function Contact() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
-    console.log('Nombre:', name);
-    console.log('Email:', email);
-    console.log('Mensaje:', message);
-
-    setName('');
-    setEmail('');
-    setMessage('');
+    console.log("Nombre:", name);
+    console.log("Email:", email);
+    console.log("Mensaje:", message);
+    setName("");
+    setEmail("");
+    setMessage("");
   };
 
   return (

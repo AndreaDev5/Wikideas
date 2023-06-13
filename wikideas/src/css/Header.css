@@ -9,41 +9,36 @@ header{
     background-repeat: no-repeat;
     background-size: cover;
     background-color: var(--primario);
+    color: var(--secundario);
 }
 
 header nav{
     display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
     justify-content: space-around;
 }
+
 nav ul{
     display: flex;
     align-items: center;
     list-style: none;
     gap: 40px;
-    padding-left: 40rem;
 }
-nav ul a{
+nav a{
     color: var(--secundario);
     font-size: 19px;
     text-decoration: none;
 }
 
-.banner_logo{
-    color: var(--secundario);
-    font-size: 2rem;
-    text-decoration: none;
-}
-
 .ask {
     display: flex;
-    padding-left: 2rem;
+    padding-left: 0.8rem;
     padding-bottom: 2rem;
+    margin-top: 30px;
 }
-
 .ask h1{
-    max-width: 800px;
     margin: 0;
-    font-size: 5rem;
     font-weight: bold;
     color: var(--secundario);
 }
@@ -53,42 +48,148 @@ nav ul a{
 }
 
 .ask form {
-        position: absolute;
-        left: 30rem;
-        top: 14rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
+    position: absolute;
+    left: 8.5rem;
+    top: 9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
-
 .ask form input {
-        width: 300px;
-        padding: 10px;
-        font-size: 16px;
-        border: none;
-        border-radius: 4px;
-    }
+    width: 150px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+}
 .ask form input:focus{
-    color: var(--secundario);
-    background-color: #39c7dd;
-    outline: 0;
-    -webkit-transition: all 400ms;
-    -moz-transition: all 400ms;
-    -mos-transition: all 400ms;
-    -o-transition: all 400ms;
-    transition: all 400ms;
+color: var(--secundario);
+background-color: #39c7dd;
+outline: 0;
+-webkit-transition: all 400ms;
+-moz-transition: all 400ms;
+-mos-transition: all 400ms;
+-o-transition: all 400ms;
+transition: all 400ms;
 }
 
 .ask form button {
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 6px 16px;
+    font-size: 12px;
     background-color: #39c7dd;
     color: var(--secundario);
     border: none;
     border-radius: 4px;
-    margin-left: 10px;
-    cursor: pointer;
+    margin-left: 8px;
 }
+
+@media (min-width: 390px) {
+    header{
+        height: fit-content;
+    }
+
+    .ask form {
+        left: 11rem;
+        top: 7rem
+    }
+    
+}
+
+@media (min-width: 1000px) {
+    header{
+        display: block;
+        opacity: 0.9;
+        width: 100%;
+        padding-top: 20px;
+        background-image: url('../Assets/Header1.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: var(--primario);
+    }
+    
+    header nav{
+        display: flex;
+        justify-content: space-around;
+    }
+    nav ul{
+        display: flex;
+        align-items: center;
+        list-style: none;
+        gap: 40px;
+        padding-left: 40rem;
+    }
+    nav ul a{
+        color: var(--secundario);
+        font-size: 19px;
+        text-decoration: none;
+    }
+    
+    .banner_logo{
+        color: var(--secundario);
+        font-size: 2rem;
+        text-decoration: none;
+    }
+    
+    .ask {
+        display: flex;
+        padding-left: 2rem;
+        padding-bottom: 2rem;
+    }
+    
+    .ask h1{
+        max-width: 800px;
+        margin: 0;
+        font-size: 5rem;
+        font-weight: bold;
+        color: var(--secundario);
+    }
+    .ask h1 span{
+        display: block;
+        color: yellow;
+    }
+    
+    .ask form {
+            position: absolute;
+            left: 30rem;
+            top: 14rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+    }
+    
+    .ask form input {
+            width: 300px;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+        }
+    .ask form input:focus{
+        color: var(--secundario);
+        background-color: #39c7dd;
+        outline: 0;
+        -webkit-transition: all 400ms;
+        -moz-transition: all 400ms;
+        -mos-transition: all 400ms;
+        -o-transition: all 400ms;
+        transition: all 400ms;
+    }
+    
+    .ask form button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #39c7dd;
+        color: var(--secundario);
+        border: none;
+        border-radius: 4px;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+}
+
+
     
