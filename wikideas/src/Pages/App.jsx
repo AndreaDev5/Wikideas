@@ -13,10 +13,10 @@ const AppRoutes = () => {
     { path: "/contact", element: <Contact /> },
   ]);
   return routes;
-};
+}; 
 
 const App = () => {
-  axios.get('http://localhost:3900/api/data')
+  axios.get('/api/data')
   .then(response => {
     console.log(response.data);
   })

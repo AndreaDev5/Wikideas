@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "./Header";
 import Results from "./Results";
 import Footer from "./Footer";
@@ -11,20 +11,39 @@ import "../css/Home.css";
 
 const Home = () => {
   const [busq, setBusq] = useState(false);
+  
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    try {
+      const response = await fetch("https://wiki-wavm.onrender.com/api/articulos/consulta");
+      const data = await response.json();
+      setData(data);
+    } catch (error) {
+      console.error("Error al obtener los datos:", error);
+    }
+  };
+
+  console.log(data); // Verifica los datos recibidos en la consola
+
   return (
     <>
       <Header busq={busq} setBusq={setBusq} />
       <Results busq={busq} />
-      <p className="cat">Temas mas buscados</p>
+      <p className="cat">Temas más buscados</p>
       <section className="container__cursos">
         <article className="card">
           <figure>
             <img src={card1Image} alt="Imagen 1" />
           </figure>
           <div className="contenido">
-            <h3>Tecnologia</h3>
+            <h3>Tecnología</h3>
             <p>
-              descubre los avances que están transformando nuestro mundo. Desde
+              Descubre los avances que están transformando nuestro mundo. Desde
               la inteligencia artificial hasta la electrónica, mantente
               actualizado sobre los últimos descubrimientos y desarrollos
               tecnológicos. Aprende cómo la tecnología está dando forma a
@@ -42,7 +61,7 @@ const Home = () => {
           <div className="contenido">
             <h3>Historia</h3>
             <p>
-              sumérgete en el fascinante pasado que ha moldeado nuestro
+              Sumérgete en el fascinante pasado que ha moldeado nuestro
               presente. Explora civilizaciones antiguas, eventos históricos
               clave y las vidas de personajes influyentes. Comprende cómo las
               decisiones y los acontecimientos pasados continúan impactando
@@ -58,9 +77,9 @@ const Home = () => {
             <img src={card3Image} alt="Imagen 3" />
           </figure>
           <div className="contenido">
-            <h3>zen</h3>
+            <h3>Zen</h3>
             <p>
-              encuentra equilibrio y serenidad en tu vida cotidiana. Descubre
+              Encuentra equilibrio y serenidad en tu vida cotidiana. Descubre
               las enseñanzas ancestrales de esta tradición espiritual y
               filosófica, que enfatiza la conexión mente-cuerpo y la atención
               plena. Explora prácticas meditativas y aprende a vivir en el
