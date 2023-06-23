@@ -1,7 +1,10 @@
 .Results-container {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   margin-top: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .Results-table {
@@ -75,4 +78,26 @@
   .Results-description {
     margin-bottom: 0;
   }
+}
+
+.pero{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 3rem;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  padding: 15px;
+  color: black;
+  width: 280px;
+  background-color: #61cddd;
+}
+
+.pero:hover{
+  transform: scale(1.05);
+  transition: 400ms;
+  padding: 15px;
+  box-shadow: 5px 5px 20px rgba(12, 135, 229, 0.4);
 }

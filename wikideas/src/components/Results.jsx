@@ -2,13 +2,26 @@ import { FiSearch } from "react-icons/fi"; // Importación del icono de búsqued
 import { Link } from "react-router-dom"; // Importación del componente de enlace desde react-router-dom
 import "../css/Results.css"; 
 
-const Results = ({ busq }) => {
+const Results = ({ busq, data }) => {
   const handleConsultar = (tema) => {
     console.log("Consulta:", tema); // Función para manejar la consulta de un tema
   };
-
+  const results = data.map((item)=>(
+    <article className="pero" key={item.id}>
+      <figure>
+        <img src={item.imagen ? item.imagen :"https://placekitten.com/90/130"} alt={`imagen de ${item.titulo}`} />
+        <figcaption>{`imagen de ${item.titulo}`}</figcaption>
+      </figure>
+      <div>
+        <h2>{item.titulo}</h2>
+        <p>{item.contenido}</p>
+      </div>
+    </article>
+  ))
+  console.log(data)
   return (
     <section className="Results-container">
+      {results}
       {busq && (
         <div className="Results-table">
           <div className="Results-row">

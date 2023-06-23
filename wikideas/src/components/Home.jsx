@@ -28,12 +28,10 @@ const Home = () => {
     }
   };
 
-  console.log(data); // Verifica los datos recibidos en la consola
-
   return (
     <>
       <Header busq={busq} setBusq={setBusq} />
-      <Results busq={busq} />
+      <Results busq={busq} data={data}/>
       <p className="cat">Temas más buscados</p>
       <section className="container__cursos">
         <article className="card">

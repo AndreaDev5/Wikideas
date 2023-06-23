@@ -7,7 +7,6 @@ const Header = ({ busq, setBusq }) => {
   const handleChange = (e) => {
     e.preventDefault();
     setBusq(!busq);
-    console.log(busq);
   };
 
   const handleLogoClick = () => {
