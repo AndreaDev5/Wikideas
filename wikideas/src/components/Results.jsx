@@ -1,4 +1,3 @@
-import React from "react";
 import { FiSearch } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import "../css/Results.css";
@@ -22,9 +21,9 @@ const Results = ({ busq, data }) => {
             <p className="card-description">{item.contenido}</p>
           </div>
           <div className="card-button">
-            <button onClick={() => handleConsultar(item.titulo)}>
+            <Link to={`/consulta/${item.id}`}>
               Consultar
-            </button>
+            </Link>
           </div>
         </div>
       </article>
