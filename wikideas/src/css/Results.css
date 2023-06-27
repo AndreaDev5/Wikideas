@@ -1,103 +1,61 @@
 .Results-container {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   margin-top: 20px;
-  padding-left: 30px;
-  padding-right: 30px;
 }
 
-.Results-table {
-  width: 100%;
-  max-width: 800px;
-}
-
-.Results-row {
+.result-card {
   display: flex;
   align-items: center;
-  background-color: rgba(238, 230, 230, 0.1);
-  margin-bottom: 10px;
-  padding: 10px;
-  transition: background-color 0.3s;
+  justify-content: space-between;
+  width: 70%;
+  padding: 20px;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
 }
 
-.Results-row:hover {
-  background-color: rgba(98, 64, 143, 0.2);
+.result-card:hover {
+  transform: scale(1.05);
 }
 
-.Results-icon {
-  flex: 0 0 50px;
+.card-content {
   display: flex;
   align-items: center;
-  justify-content: center;
-}
-
-.Results-content {
   flex: 1;
+}
+
+.card-icon {
+  margin-right: 10px;
+}
+
+.card-text {
+  flex: 1;
+  text-align: center;
+}
+
+.card-button {
   margin-left: 10px;
 }
 
-.Results-title {
-  color: rgb(19, 17, 17);
-  font-size: 20px;
-  margin-bottom: 5px;
-}
-
-.Results-description {
-  margin-bottom: 10px;
-}
-
-.Results-button {
-  display: inline-block;
+.card-button button {
+  background-color: #8228d6;
+  color: #fff;
+  border: none;
   padding: 8px 12px;
-  background-color: rgb(73, 14, 94);
-  color: white;
-  text-decoration: none;
   border-radius: 4px;
-  transition: background-color 0.3s;
+  cursor: pointer;
 }
 
-.Results-button:hover {
-  background-color: darkpurple;
+.card-button button:hover {
+  background-color: #ad38cd;
 }
 
 @media screen and (max-width: 600px) {
-  .Results-row {
-    flex-direction: column;
-    align-items: flex-start;
+  .result-card {
+    width: 90%;
   }
-
-  .Results-icon {
-    margin-bottom: 10px;
-  }
-
-  .Results-content {
-    margin-left: 0;
-  }
-
-  .Results-description {
-    margin-bottom: 0;
-  }
-}
-
-.pero{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  border-radius: 3rem;
-  margin-bottom: 10px;
-  margin-right: 10px;
-  padding: 15px;
-  color: black;
-  width: 280px;
-  background-color: #61cddd;
-}
-
-.pero:hover{
-  transform: scale(1.05);
-  transition: 400ms;
-  padding: 15px;
-  box-shadow: 5px 5px 20px rgba(12, 135, 229, 0.4);
 }

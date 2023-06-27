@@ -10,8 +10,7 @@ import bombilla from "../Assets/bombilla.jpg";
 import "../css/Home.css";
 
 const Home = () => {
-  const [busq, setBusq] = useState(false);
-  
+  const [busq, setBusq] = useState("");
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -31,7 +30,7 @@ const Home = () => {
   return (
     <>
       <Header busq={busq} setBusq={setBusq} />
-      <Results busq={busq} data={data}/>
+      <Results busq={busq} data={data} />
       <p className="cat">Temas más buscados</p>
       <section className="container__cursos">
         <article className="card">
