@@ -1,12 +1,11 @@
 import "../css/Header.css";
 import { useState } from "react";
 
-const Header = ({ busq, setBusq }) => {
+const Header = ({ busq, setBusq, onSearch }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleChange = (e) => {
-    e.preventDefault();
-    setBusq(e.target.value.toLowerCase()); // Actualizamos el estado de búsqueda con el valor del campo de búsqueda
+    setBusq(e.target.value.toLowerCase());
   };
 
   const handleLogoClick = () => {
@@ -15,6 +14,11 @@ const Header = ({ busq, setBusq }) => {
 
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    onSearch(); // Llamar a la función de búsqueda proporcionada por el componente padre
   };
 
   return (
@@ -49,9 +53,9 @@ const Header = ({ busq, setBusq }) => {
             ¿Quieres consultar, <span>colaborar</span> o crear?
           </h1>
 
-          <form>
+          <form onSubmit={handleSearch}>
             <input type="text" placeholder="Buscar..." onChange={handleChange} />
-            <button type="submit">Buscar</button>
+            <button type="button" onClick={handleSearch}>Buscar</button>
           </form>
         </section>
       </header>
