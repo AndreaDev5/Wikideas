@@ -6,7 +6,7 @@ const Header = ({ busq, setBusq }) => {
 
   const handleChange = (e) => {
     e.preventDefault();
-    setBusq(!busq);
+    setBusq(e.target.value.toLowerCase()); // Actualizamos el estado de búsqueda con el valor del campo de búsqueda
   };
 
   const handleLogoClick = () => {
@@ -50,8 +50,8 @@ const Header = ({ busq, setBusq }) => {
           </h1>
 
           <form>
-            <input type="text" placeholder="Buscar..." />
-            <button onClick={handleChange}>Buscar</button>
+            <input type="text" placeholder="Buscar..." onChange={handleChange} />
+            <button type="submit">Buscar</button>
           </form>
         </section>
       </header>
