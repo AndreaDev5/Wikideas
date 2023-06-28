@@ -1,1 +1,160 @@
+/* Create.css */
 @import './Variables.css';
+.create {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.create-window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.create-window:hover {
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+.create-window h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.create-window p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.create-button {
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    background-color: var(--primario);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(23, 22, 22, 0.8);
+    z-index: 999;
+}
+
+.modal-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.modal-content {
+    max-width: 500px;
+    width: 90%;
+    padding: 2rem;
+    background-color: #252323;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.modal-content h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.modal-content form {
+    margin-bottom: 2rem;
+}
+
+.modal-content form .input-group {
+    margin-bottom: 1rem;
+}
+
+.modal-content form label {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.modal-content form input,
+.modal-content form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.modal-content form textarea {
+    height: 100px;
+    resize: none;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.modal-buttons button {
+    margin: 0 0.5rem;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    background-color: var(--primario);
+    color: #bbd2d6;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.preview-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(24, 26, 26, 0.8);
+    z-index: 999;
+}
+
+.preview-modal .modal-content {
+    max-width: 500px;
+    width: 90%;
+    padding: 2rem;
+    background-color: #0fa78d;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.preview-modal .modal-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.preview-modal .modal-buttons {
+    display: flex;
+    justify-content: center;
+}
