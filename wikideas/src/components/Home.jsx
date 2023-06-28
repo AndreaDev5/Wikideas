@@ -9,6 +9,8 @@ import card3Image from "../Assets/Card3.jpg";
 import bombilla from "../Assets/bombilla.jpg";
 import "../css/Home.css";
 
+
+
 const Home = () => {
   const [busq, setBusq] = useState("");
   const [data, setData] = useState([]);

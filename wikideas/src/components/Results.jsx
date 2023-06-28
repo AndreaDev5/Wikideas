@@ -2,6 +2,7 @@ import { FiSearch } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import "../css/Results.css";
 
+
 const Results = ({ busq, data }) => {
   let filteredData = [];
   if (busq && typeof busq === "string") {

@@ -1,0 +1,22 @@
+@import './Variables.css';
+
+/* Estilo para la barra de desplazamiento en navegadores webkit (Chrome, Safari) */
+/* Ajusta los valores según tus preferencias */
+::-webkit-scrollbar {
+  width: 9px; /* Ancho de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Color de fondo del riel */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primario); /* Color del pulgar de la barra de desplazamiento */
+}
+
+/* Estilo para el riel de la barra de desplazamiento en navegadores Firefox */
+/* Ajusta los valores según tus preferencias */
+::-moz-scrollbar {
+  scrollbar-color: var(--primario) #f1f1f1;
+  scrollbar-width: thin;
+}

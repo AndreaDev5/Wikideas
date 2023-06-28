@@ -2,6 +2,7 @@ import dev from "../Assets/Misión.jpg";
 import "../css/About.css";
 
 
+
 const About = () => {
   return (
     <section className="about">
