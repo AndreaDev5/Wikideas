@@ -1,11 +1,12 @@
 import "../css/Header.css";
 import { useState } from "react";
 
-const Header = ({ busq, setBusq, onSearch }) => {
+const Header = ({ busq, setBusq, onSearch, setShowResult }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleChange = (e) => {
     setBusq(e.target.value.toLowerCase());
+    setShowResult(false)
   };
 
   const handleLogoClick = () => {
@@ -18,7 +19,8 @@ const Header = ({ busq, setBusq, onSearch }) => {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    onSearch(); // Llamar a la función de búsqueda proporcionada por el componente padre
+   /*  onSearch(); */ // Llamar a la función de búsqueda proporcionada por el componente padre
+    setShowResult(true)
   };
 
   return (

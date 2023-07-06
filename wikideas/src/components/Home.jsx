@@ -14,6 +14,7 @@ import "../css/Home.css";
 const Home = () => {
   const [busq, setBusq] = useState("");
   const [data, setData] = useState([]);
+  const [showResult, setShowResult] = useState(false)
 
   useEffect(() => {
     fetchData();
@@ -28,11 +29,10 @@ const Home = () => {
       console.error("Error al obtener los datos:", error);
     }
   };
-
   return (
-    <>
-      <Header busq={busq} setBusq={setBusq} />
-      <Results busq={busq} data={data} />
+    <div className="body">
+      <Header busq={busq} setBusq={setBusq} setShowResult={setShowResult}/>
+      {showResult ? <Results busq={busq} data={data} setShowResult={setShowResult}/> : false}
       <p className="cat">Temas más buscados</p>
       <section className="container__cursos">
         <article className="card">
@@ -112,7 +112,7 @@ const Home = () => {
       </section>
       <About />
       <Footer />
-    </>
+    </div>
   );
 };
 

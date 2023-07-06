@@ -3,7 +3,6 @@ import Home from "../components/Home";
 import Create from "../components/Create";
 import Team from "../components/Team";
 import Contact from "../components/Contact";
-import axios from 'axios';
 import '../css/Scroollbar.css';
 
 
@@ -18,13 +17,6 @@ const AppRoutes = () => {
 }; 
 
 const App = () => {
-  axios.get('/api/data')
-  .then(response => {
-    console.log(response.data);
-  })
-  .catch(error => {
-    console.log(error);
-  });
 
   return (
     <BrowserRouter>

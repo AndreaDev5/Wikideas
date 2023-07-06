@@ -1,9 +1,10 @@
 import { FiSearch } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import ModalError from "./ModalError";
 import "../css/Results.css";
 
 
-const Results = ({ busq, data }) => {
+const Results = ({ busq, data, setShowResult }) => {
   let filteredData = [];
   if (busq && typeof busq === "string") {
     filteredData = data.filter(
@@ -12,8 +13,7 @@ const Results = ({ busq, data }) => {
         item.contenido.toLowerCase().includes(busq)
     );
   }
-
-  const results = filteredData.map((item) => (
+  const results = (filteredData.length >= 1 ) ? filteredData.map((item) => (
     <article className="result-card" key={item.id}>
       <div className="card-content">
         <div className="card-icon">
@@ -27,8 +27,8 @@ const Results = ({ busq, data }) => {
           <Link to={`/consulta/${item.id}`}>Consultar</Link>
         </div>
       </div>
-    </article>
-  ));
+    </article>)) : <ModalError setShowResult={setShowResult}/>
+  
 
   return <section className="Results-container">{results}</section>;
 };
