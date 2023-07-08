@@ -1,18 +1,20 @@
-import React from 'react'
 import "../css/ModalError.css";
 
-const ModalError = ({setShowResult}) => {
+const ModalError = ({ setShowResult, searchWord }) => {
+  const closeModal = (e) => {
+    e.preventDefault();
+    setShowResult(false);
+  };
 
-  const closeModal = (e) =>{
-    e.preventDefault()
-    setShowResult(false)
-  }
   return (
-    <div className='error'>
-      <p>No hay resultados que coincidan con lo que buscas</p>
-      <button onClick={closeModal}>Cerrar</button>
-     </div>
-  )
-}
+    <div className="modal-container">
+      <div className="error">
+        <p> La palabra que buscas no se encuentra en Wikideas 🤖</p>
+        <p> Realiza una nueva búsqueda 👩🏻‍💻 </p>
+        <button onClick={closeModal}>Aceptar</button>
+      </div>
+    </div>
+  );
+};
 
-export default ModalError
+export default ModalError;
